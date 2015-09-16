@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:minHeight="80dp" >
+
+    <ImageView
+        android:id="@+id/iv_store_icon"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/default_icon" />
+    
+    <TextView
+        android:id="@+id/tv_store_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/iv_store_icon"
+        android:text="上岛咖啡"
+        android:textColor="#ff000000"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+    
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/store_ratingbar_style"
+        android:layout_alignLeft="@+id/tv_store_name"
+        android:layout_below="@+id/tv_store_name"
+        android:isIndicator="true"
+        android:progress="50" />
+    
+    <TextView
+        android:id="@+id/tv_cpp_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ratingBar"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/ratingBar"
+        android:text="人均"
+        android:textColor="#ffa6a6a6"
+        android:textSize="12sp" />
+    
+    <TextView
+        android:id="@+id/tv_cpp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_cpp_title"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@+id/tv_cpp_title"
+        android:text="125￥"
+        android:textColor="#ffd6852a"
+        android:textSize="12sp" />
+    
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ratingBar"
+        android:layout_below="@+id/ratingBar"
+        android:layout_marginTop="6dp"
+        android:layout_toLeftOf="@+id/iv_favorite"
+        android:ellipsize="end"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="人均人均人均人均人均人均人均人均人均人均人均人均"
+        android:textColor="#ffa6a6a6"
+        android:textSize="12sp" />
+    <LinearLayout 
+          android:id="@+id/tv_distance_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ratingBar"
+        android:layout_below="@+id/tv_address"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffa6a6a6"
+        android:textSize="12sp" />
+        
+    </LinearLayout>
+   
+    
+    <ImageView
+        android:id="@+id/iv_favorite"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/heart"
+        android:focusable="false" />
+
+</RelativeLayout>
+

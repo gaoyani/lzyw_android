@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/title_bg" >
+
+        <ImageView
+            android:id="@+id/iv_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_back_selector"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/title"
+            android:text="投诉" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_complaint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_title"
+        android:layout_margin="10dp"
+        android:background="@color/comment_item_bg"
+        android:paddingBottom="5dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingTop="2dp" >
+
+        <TextView
+            android:id="@+id/tv_store_name_title"
+            style="@style/store_info"
+            android:layout_marginTop="2dp"
+            android:text="投诉："
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_store_name_title"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/tv_store_name_title"
+            android:textColor="#ff000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_nickname_title"
+            style="@style/store_info"
+            android:layout_below="@+id/tv_store_name"
+            android:layout_marginTop="2dp"
+            android:text="用户："
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_nickname_title"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/tv_nickname_title"
+            android:textColor="#ff000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_grade"
+            style="@style/store_info"
+            android:layout_below="@+id/tv_nickname_title"
+            android:layout_marginTop="5dp"
+            android:text="原因："
+            android:textSize="13sp" />
+
+        <include
+            android:id="@+id/view_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_grade"
+            android:layout_toRightOf="@+id/tv_grade"
+            layout="@layout/time_slot_view" />
+
+        <EditText
+            android:id="@+id/et_complaint"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/view_reason"
+            android:layout_marginTop="5dp"
+            android:gravity="top|left"
+            android:hint="请输入意见投诉..."
+            android:scrollbars="vertical"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_submit_complaint"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/et_complaint"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_blue_selector"
+            android:text="提交投诉"
+            android:textColor="#ffffffff" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_respose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_complaint"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/comment_item_bg"
+        android:padding="2dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/store_info"
+            android:text="2014-7-8"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_time"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/tv_time"
+            android:text="汇为乐汇"
+            android:textColor="#ff000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_respose_info"
+            style="@style/store_info"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        layout="@layout/loading_view"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,291 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffffff"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/title_bg" >
+
+            <ImageView
+                android:id="@+id/iv_return"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_back_selector"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/title"
+                android:text="会员充值" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="5"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/store_info"
+                        android:text="订单号："
+                        android:textColor="#ff000000"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_order_id"
+                        style="@style/store_info"
+                        android:text="4546532123"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/store_info"
+                        android:text="商户名："
+                        android:textColor="#ff000000"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_store_name"
+                        style="@style/store_info"
+                        android:ellipsize="end"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="乐自(北京)科技有限公司"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/store_info"
+                        android:text="品    名："
+                        android:textColor="#ff000000"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_pay_name"
+                        style="@style/store_info"
+                        android:text="会员充值"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#ffb0b0b0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="6"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/store_info"
+                        android:text="账户余额："
+                        android:textColor="#ff000000"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_balance"
+                        style="@style/store_info"
+                        android:text="20￥"
+                        android:textColor="@color/highlight_text"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#ffb0b0b0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/member_info_table_bg"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="温馨提示："
+                android:textColor="#ff000000"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="第三方充值可能存在一定延时，充值成功后请等待一会再刷新查看账户余额，如长时间未到账请联系我们，我们将及时为您解决。"
+                android:textColor="#ff5f5f5f"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/tv_recharge_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="充值金额"
+                android:textColor="#ff000000"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_recharge_money"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_recharge_title"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_recharge_title"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:text="100"
+                android:textColor="#ff000000"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/et_recharge_money"
+                android:layout_below="@+id/et_recharge_money"
+                android:layout_marginTop="10dp" >
+
+                <Button
+                    android:id="@+id/btn_50"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="50￥"
+                    android:textColor="#ff808080"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn_100"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="100￥"
+                    android:textColor="#ff808080"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn_300"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="300￥"
+                    android:textColor="#ff808080"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btn_500"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="500￥"
+                    android:textColor="#ff808080"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="请选择充值方式："
+            android:textColor="#ff000000"
+            android:textSize="15sp" />
+
+        <RadioGroup
+            android:id="@+id/rg_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_ali"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/payment_ali_icon"
+                android:button="@drawable/check_box_login"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rb_yl"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/payment_yl_icon"
+                android:button="@drawable/check_box_login" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_pay"
+            style="@style/reservation_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_orange_selector"
+            android:text="前往支付"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        layout="@layout/loading_view"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,213 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fffff1e4"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent" 
+        android:layout_height="50dp"
+        android:background="@color/title_bg" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/title"
+            android:text="乐分享" />
+
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_menu_selector" />
+
+        <ImageButton
+            android:id="@+id/btn_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_back_selector" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff" >
+
+        <ImageView
+            android:id="@+id/iv_qr_code_bg"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/qrcode_bg" />
+
+        <ImageView
+            android:id="@+id/iv_qr_code"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignTop="@+id/iv_qr_code_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/tv_qr_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_qr_code_bg"
+            android:layout_centerHorizontal="true"
+            android:text="提交推荐信息 获取积分奖励"
+            android:textColor="#ff000000"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_below="@+id/tv_qr_tip"
+            android:layout_marginTop="10dp"
+            android:background="#ffb3a79b" />
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:text="推荐信息登记"
+        android:textColor="#ff000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="15dp"
+        android:background="#ffb3a79b" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff" >
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/login_user_name_icon" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/iv_contacts"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:background="#ffffffff"
+            android:ems="10"
+            android:hint="请输入被推荐人手机号…"
+            android:inputType="phone"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/iv_contacts"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/contacts_icon" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ffb0b0b0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/share_name_icon" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="8dp"
+            android:background="#ffffffff"
+            android:ems="10"
+            android:hint="请输入被推荐人姓名…"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#ffb3a79b" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp" >
+
+        <Button
+            android:id="@+id/btn_next_step"
+            style="@style/reservation_button"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/button_orange_selector"
+            android:text="下一步"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_share"
+            style="@style/reservation_button"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/button_yellow_selector"
+            android:text="跳过"
+            android:textSize="14sp" />
+    </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

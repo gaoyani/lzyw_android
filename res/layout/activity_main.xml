@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff" >
+
+    <RelativeLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="false"
+        android:orientation="vertical" >
+
+        <!-- <RelativeLayout -->
+        <!-- android:id="@+id/layout_title" -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="50dp" -->
+        <!-- android:background="@color/title_bg" > -->
+
+
+        <!-- <TextView -->
+        <!-- android:id="@+id/tv_title" -->
+        <!-- style="@style/title" -->
+        <!-- android:text="汇为乐汇" /> -->
+
+
+        <!-- <ImageButton -->
+        <!-- android:id="@+id/btn_menu" -->
+        <!-- android:layout_width="50dp" -->
+        <!-- android:layout_height="50dp" -->
+        <!-- android:layout_alignParentRight="true" -->
+        <!-- android:layout_centerVertical="true" -->
+        <!-- android:background="@drawable/button_menu_selector" /> -->
+
+
+        <!-- <ImageButton -->
+        <!-- android:id="@+id/btn_search" -->
+        <!-- android:layout_width="50dp" -->
+        <!-- android:layout_height="50dp" -->
+        <!-- android:layout_centerVertical="true" -->
+        <!-- android:background="@drawable/button_search_view_selector" /> -->
+
+
+        <!-- </RelativeLayout> -->
+
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rg_tab"
+            android:background="@color/background"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_tab"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/tab_bg"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_member"
+                style="@style/main_tab"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/tab_member" />
+
+            <RadioButton
+                android:id="@+id/rb_share"
+                style="@style/main_tab"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/tab_share" />
+
+            <RadioButton
+                android:id="@+id/rb_search"
+                style="@style/main_tab"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/tab_search" />
+
+            <RadioButton
+                android:id="@+id/rb_main"
+                style="@style/main_tab"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/tab_main_down" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00ffffff"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+
+            <requestFocus />
+        </ImageView>
+
+        <include
+            android:id="@+id/view_main_menu"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="50dp"
+            layout="@layout/main_menu_view"
+            android:visibility="gone" />
+    </RelativeLayout>
+    
+    <include
+            android:id="@+id/view_chose_city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/city_chose_view"
+            android:visibility="gone" />
+
+</RelativeLayout>

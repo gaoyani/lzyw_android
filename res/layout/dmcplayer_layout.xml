@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black9" >
+
+    <LinearLayout
+        android:id="@+id/playTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top"
+        android:background="@color/title_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+         <ImageButton
+            android:id="@+id/dmcplayer_quit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_title_bg"
+            android:src="@drawable/btn_back" />
+       
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/push"
+            android:textSize="@dimen/text_big" />
+        
+         <ImageButton
+            android:id="@+id/dmcplayer_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_title_bg"
+            android:src="@drawable/btn_search" />
+        
+
+       
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pic_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/playTitle"
+        android:background="#88333333"
+        android:orientation="horizontal" >
+
+ 	<android.support.v4.view.ViewPager
+ 	    android:id="@+id/push_pager"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/dmcplayer_show"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon" 
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dmcplayer_controllayout"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/black9"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:id="@+id/dmcplayer_controlbar_sublayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/black9"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/dmcplayer_pre_one"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@color/black9"
+                android:src="@drawable/c_left" />
+
+            <ImageButton
+                android:id="@+id/dmcplayer_control_button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@color/black9"
+                android:src="@drawable/c_pause" />
+
+            <ImageButton
+                android:id="@+id/dmcplayer_next_one"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:background="@color/black9"
+                android:src="@drawable/c_right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/dmcplayer_controlbar_seekbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/dmcplayer_controllayout"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:progressDrawable="@drawable/seekbar_style"
+        android:thumb="@drawable/thumb" />
+
+    <LinearLayout
+        android:id="@+id/timerDisplay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/dmcplayer_controlbar_seekbar"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" >
+
+        <!-- Current Duration Label -->
+
+        <TextView
+            android:id="@+id/CurrentDurationLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="00:00"
+            android:textColor="#eeeeee"
+            android:textStyle="bold" />
+        <!-- Total Duration Label -->
+
+        <TextView
+            android:id="@+id/TotalDurationLabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="00:00"
+            android:textColor="#04cbde"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

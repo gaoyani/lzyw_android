@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/shake_bg" >
+
+        </FrameLayout>
+    <LinearLayout
+        android:id="@+id/yao_my_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="146dp"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/finding"
+             />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/yao_notice_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bottom_bar"
+        android:text="		Note:\n		This is a game."
+         />
+
+    <include
+        android:id="@+id/center_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        layout="@layout/yao_center_layout"
+        android:visibility="gone" />
+
+    <AbsoluteLayout
+        android:id="@+id/yao_tag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/yao_notice_txt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="148dp"
+            android:layout_height="74dp"
+            android:layout_x="51dp"
+            android:layout_y="56dp"
+          />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_x="206dp"
+            android:layout_y="49dp"
+             />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_x="138dp"
+            android:layout_y="160dp"
+            android:text="特色服务" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="74dp"
+            android:layout_height="37dp"
+            android:layout_x="60dp"
+            android:layout_y="307dp"
+            android:text="特色服务"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="74dp"
+            android:layout_height="37dp"
+            android:layout_x="224dp"
+            android:layout_y="300dp"
+            android:text="特色服务"
+            android:textSize="12sp" />
+
+    </AbsoluteLayout>
+
+</RelativeLayout>

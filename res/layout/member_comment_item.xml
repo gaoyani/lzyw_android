@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:paddingBottom="5dp" >
+
+        <TextView
+            android:id="@+id/tv_store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="上岛咖啡--牡丹园店"
+            android:textColor="#ff4f4f4f"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_store_name"
+            android:layout_below="@+id/tv_store_name"
+            android:layout_marginTop="8dp"
+            android:text="2014年7月8日"
+            android:textColor="#ff6f6f6f"
+            android:textSize="12sp" />
+        
+        <RatingBar
+            android:id="@+id/ratingBar_display"
+            style="@style/comment_ratingbar_style"
+            android:layout_alignTop="@+id/tv_info"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="-4dp"
+            android:layout_toRightOf="@+id/tv_info"
+            android:isIndicator="true" />
+        
+        <TextView
+                 android:id="@+id/tv_stars_display"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBaseline="@+id/tv_info"
+                 android:layout_marginLeft="5dp"
+                 android:layout_toRightOf="@+id/ratingBar_display"
+                 android:text="(4.5星)"
+                 android:textColor="#ffdf0000"
+                 android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_comment"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_orange_selector"
+            android:text="评论"
+            android:textColor="#ffffffff"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:focusable="false" />
+        
+        <RelativeLayout
+            android:id="@+id/layout_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_info"
+            android:layout_alignRight="@+id/btn_comment"
+            android:layout_below="@+id/tv_info"
+            android:visibility="visible" >
+            
+            <TextView 
+                android:id="@+id/tv_grade"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="评分："
+            	android:layout_marginTop="10dp"
+            	android:textColor="#fff3bf69"
+            	android:textSize="12sp"/>
+            
+             <RatingBar
+                 android:id="@+id/ratingBar"
+                 style="@style/comment_ratingbar_style"
+                 android:layout_alignTop="@+id/tv_grade"
+                 android:layout_marginTop="-4dp"
+                 android:layout_toRightOf="@+id/tv_grade"
+                 android:isIndicator="false"/>
+             
+             <TextView
+                 android:id="@+id/tv_stars"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignBaseline="@+id/tv_grade"
+                 android:layout_marginLeft="5dp"
+                 android:layout_toRightOf="@+id/ratingBar"
+                 android:text="(4.5星)"
+                 android:textColor="#ffdf0000"
+                 android:textSize="12sp" />
+            
+            <TextView 
+                android:id="@+id/tv_comment"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_below="@+id/tv_grade"
+            	android:layout_marginTop="5dp"
+            	android:text="评价："
+            	android:textColor="#fff3bf69"
+            	android:textSize="12sp"/>
+            
+            <EditText
+                android:id="@+id/et_comment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignTop="@+id/tv_comment"
+                android:layout_toRightOf="@+id/tv_comment"
+                android:gravity="top|left"
+                android:hint="说点什么吧..."
+                android:scrollbars="vertical"
+                android:textSize="12sp" />
+            
+        </RelativeLayout>
+        
+<!--         <ImageView -->
+<!--             android:layout_width="match_parent" -->
+<!--             android:layout_height="1dp" -->
+<!--             android:layout_alignParentBottom="true" -->
+<!--             android:background="#fff3bf69" -->
+<!--             android:paddingTop="20dp" /> -->
+
+</RelativeLayout>
+

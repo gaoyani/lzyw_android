@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fffff1e4"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_bg" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/title"
+            android:text="导航" />
+
+        <ImageButton
+            android:id="@+id/btn_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_back_selector" />
+
+        <ImageButton
+            android:id="@+id/btn_navigation"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_navigation_selector" />
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/layout_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_title"
+        android:orientation="vertical" >
+
+    <include
+        android:id="@+id/view_starting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        layout="@layout/edit_input_view" />
+
+    <include
+        android:id="@+id/view_destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/edit_input_view" />
+
+    <Button
+        android:id="@+id/btn_start_navigation"
+        style="@style/reservation_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_blue_selector"
+        android:text="开始导航"
+        android:textSize="15sp" />
+    
+    </LinearLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_navigation"
+        android:clickable="true" />
+
+    <include
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        layout="@layout/loading_view"
+        android:visibility="gone" />
+
+</RelativeLayout>

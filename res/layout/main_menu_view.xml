@@ -1,0 +1,16 @@
+<com.huiwei.roomreservation.view.MainMenuView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_bg" >
+
+    <ListView
+        android:id="@+id/lv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:gravity="center"
+        android:listSelector="#fffff6ef"
+        android:background="#ffe5e5e5" />
+
+</com.huiwei.roomreservation.view.MainMenuView>

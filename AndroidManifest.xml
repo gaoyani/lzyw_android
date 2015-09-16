@@ -1,0 +1,241 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.huiwei.roomreservation"
+    android:versionCode="34"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:versionName="1.0.41" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+    
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+
+	<application
+        android:name="com.huiwei.roomreservation.common.SysApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        tools:replace="name,icon,label,theme"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan"
+            android:name="com.huiwei.roomreservation.activity.MainActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.LoginActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.StoreListActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.StoreDetailActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.RoomDetailActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.RoomReservationActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.ServiceDetailActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.ServiceReservationActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.ReservationDoneActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.setting.MemberInfoEditActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.fragment.MapFragment">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.MipcaCaptureActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.WebActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.StoreSceneActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.setting.ResetPwdActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.AboutActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.AgreementActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.PaymentChoseActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.RechargeChoseActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.CommentActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.OrderDetailActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.NewsDetailActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.ComplaintActivity">
+        </activity>
+         <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.NavigationActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.setting.ModifyPwdActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.setting.ResetPayPwdActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.setting.ResetPhoneNumberActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.setting.SetNormalInfoActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.setting.SetPayPwdActivity">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.huiwei.roomreservation.activity.setting.SettingActivity">
+        </activity>
+       <activity
+            android:name="cat.projects.store.Yao2yao"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <provider
+            android:name="com.luxs.provider.IPsProvider"
+            android:authorities="com.luxs.provider.IPsProvider" >
+        </provider>
+        <provider
+            android:name="com.luxs.provider.FileProvider"
+            android:authorities="com.luxs.provider.FileProvider" >
+        </provider>
+
+        <activity
+            android:name="cat.projects.mediaplayer_ui.DMCPlayerActivity"
+            android:label="@string/push"
+            android:screenOrientation="portrait" >
+        </activity>	
+        <activity
+            android:name="cat.projects.mediaplayer_ui.DMCRenderListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cat.projects.mediaplayer_ui.FileListActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.luxs.common_ui.SearchFileActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.luxs.common_ui.SettingConnectActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:launchMode="singleTask">
+        </activity>
+           <!--  android:launchMode="singleTask"
+            android:screenOrientation="sensor" -->
+        <activity
+            android:name="com.luxs.common_ui.RandomCodeActivity"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        <activity
+            android:name="cat.projects.mediaplayer_ui.PushActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity> 
+        <activity
+            android:name="com.luxs.remotecontrol_ui.MouseKeyboardActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysVisible" >
+        </activity>
+        <meta-data  
+        	android:name="com.baidu.lbsapi.API_KEY"  
+        	android:value="sUoqondiCOioXqwBlWmHdip3" />
+        
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <service
+            android:name="cat.projects.dmc_service.DMCMediaService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_bg" >
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#b0ffffff"/>
+    
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/title_bg" >
+
+        <ImageView
+            android:id="@+id/iv_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_back_selector"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/title"
+            android:text="关于本软件" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/layout_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/app_logo" />
+    
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/about_app_name"
+        android:textColor="@color/highlight_text"
+        android:textSize="18sp" />
+    
+    <TextView
+        android:id="@+id/tv_app_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_app_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="v1.0.2 beta"
+        android:textColor="#ff000000"
+        android:textSize="14sp" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_app_version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:id="@+id/tv_info_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/about_info"
+            android:textColor="#ff000000"
+            android:textSize="16sp" />
+        
+        <TextView
+            android:id="@+id/tv_info_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:text="@string/about_info_2"
+            android:textColor="@color/link_text"
+            android:textSize="16sp" />
+        
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_company_name"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="技术支持"
+        android:textColor="#ff000000"
+        android:textSize="16sp" />
+    
+    <TextView
+        android:id="@+id/tv_company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/tv_copyright"
+        android:text="@string/about_company_name"
+        android:textColor="#ff505050"
+        android:textSize="12sp" />
+    
+    <TextView
+        android:id="@+id/tv_copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/about_copyright"
+        android:textColor="#ff505050"
+        android:textSize="12sp" />
+
+</RelativeLayout>

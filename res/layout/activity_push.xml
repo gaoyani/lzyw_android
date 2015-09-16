@@ -1,0 +1,79 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wrapper"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg" >
+    
+    <!-- 首页 -->
+    <LinearLayout
+	    android:id="@+id/main"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical">
+	    
+       
+	    
+	    <!-- 二级导航 -->
+	    <FrameLayout 
+	        android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	        >
+	        <LinearLayout
+		        android:layout_width="fill_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal"
+		    	android:background="@android:color/transparent">
+		        <Button 
+		            android:id="@+id/tabCommon"
+		            style="@style/nav2"
+		    		android:text="@string/tab_common"
+		    		 
+		            />
+		        <Button 
+		            android:id="@+id/tabImage"
+		            style="@style/nav2"
+		    		android:text="@string/tab_image"
+		    		 
+		            />
+		        <Button 
+		            android:id="@+id/tabMusic"
+		            style="@style/nav2" 
+		    		android:text="@string/tab_music"
+		    		 
+		            />
+		        <Button 
+		            android:id="@+id/tabVideo"
+		            style="@style/nav2"
+		    		android:text="@string/tab_video"
+		    		 
+		            />
+		        <Button 
+		            android:id="@+id/tabCloud"
+		            style="@style/nav2"
+		    		android:text="@string/tab_cloud"
+		    		 
+		            />
+		    </LinearLayout>
+		    
+		    <ImageView 
+		        android:id="@+id/tabCurrent"
+		        android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:background="@drawable/tab_current"
+		    	android:layout_gravity="bottom"
+		        />
+		    
+	    </FrameLayout>
+	    
+	    <!-- 滑动视图 -->
+	    <ViewFlipper
+		    android:id="@+id/flipper"
+		    android:layout_width="fill_parent"
+	    	android:layout_height="0dp"
+	    	android:layout_weight="1">
+		</ViewFlipper>
+
+	</LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,118 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wrapper"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg" >
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" >
+
+        <requestFocus>
+        </requestFocus>
+    </EditText>
+
+    <!-- 鼠标键盘 -->
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <!-- 标题条 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@color/title_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_title_bg"
+                android:onClick="doClick"
+                android:src="@drawable/btn_back" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/mouse_keyboard"
+                android:textColor="@color/title"
+                android:textSize="@dimen/text_big" />
+
+            <ImageButton
+                android:id="@+id/btnKeyboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_title_bg"
+                android:onClick="doClick"
+                android:src="@drawable/btn_keyboard" />
+        </LinearLayout>
+
+        <!-- 鼠标面板 -->
+
+        <LinearLayout
+            android:id="@+id/mouseButtonPanel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/mousePanel"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/mouse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/mouse" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonPanel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:padding="@dimen/padding_mini" >
+
+                <Button
+                    android:id="@+id/leftButton"
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/btn_bg"
+                    android:drawableTop="@drawable/icon_mouse_left"
+                    android:onClick="doClick"
+                    android:paddingBottom="@dimen/padding"
+                    android:paddingTop="@dimen/padding"
+                    android:text="@string/leftButtonInfo" />
+
+                <Button
+                    android:id="@+id/rightButton"
+                    android:layout_width="0.0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/btn_bg"
+                    android:drawableTop="@drawable/icon_mouse_right"
+                    android:onClick="doClick"
+                    android:paddingBottom="@dimen/padding"
+                    android:paddingTop="@dimen/padding"
+                    android:text="@string/rightButtonInfo" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_middle"
+    >
+    <!-- android:descendantFocusability="blocksDescendants" -->
+    <TextView 
+	    android:id="@+id/ip"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:textSize="@dimen/text"
+	    android:textColor="@color/black8">
+	</TextView>
+	<TextView 
+	    android:id="@+id/status"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:textSize="@dimen/text"
+	    android:textColor="@color/info"
+	    android:layout_below="@+id/ip">
+	</TextView>
+	<Button 
+	    android:id="@+id/delete"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:paddingLeft="@dimen/padding_middle"
+	    android:paddingRight="@dimen/padding_middle"
+	    android:background="@drawable/btn_bg"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentBottom="true"
+	    android:text="@string/delete"
+	    android:focusableInTouchMode="false" 
+	    />
+	<Button 
+	    android:id="@+id/connect"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:paddingLeft="@dimen/padding_middle"
+	    android:paddingRight="@dimen/padding_middle"
+	    android:layout_marginRight="@dimen/padding_small"
+	    android:background="@drawable/btn_bg"
+	    android:text="@string/connect"
+	    android:layout_toLeftOf="@+id/delete"
+	    android:layout_alignParentBottom="true"
+	    android:focusableInTouchMode="false" 
+	    />
+	
+	<!-- android:focusable="false"-->
+</RelativeLayout>

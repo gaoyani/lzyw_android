@@ -1,0 +1,105 @@
+<com.huiwei.roomreservation.view.PhoneOrderConfirmView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:background="@color/login_pop_bg"
+    android:minWidth="280dp" >
+    
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+    
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/default_icon" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:text="充值"
+        android:textColor="@color/login_pop_title"
+        android:textSize="19sp" />
+    
+    </RelativeLayout>
+    
+    <ImageView
+        android:id="@+id/iv_title_splite"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/layout_title"
+        android:layout_marginTop="5dp"
+        android:background="@color/login_pop_title" />
+    
+    <TextView
+        android:id="@+id/tv_info_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_title_splite"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="请输入您的充值金额（元）"
+        android:textColor="#ff000000"
+        android:textSize="17sp" />
+    
+    <EditText
+        android:id="@+id/et_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_info_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:inputType="number|numberDecimal"
+        android:text="1000"
+        android:textColor="#ff000000"
+        android:textSize="15sp" />
+    
+    <ImageView
+        android:id="@+id/iv_button_splite"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/et_money"
+        android:layout_marginTop="10dp"
+        android:background="#ff3f3f3f" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/iv_button_splite"
+        android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/btn_input_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/button_login_pop_selector"
+        android:text="取消"
+        android:textColor="#ff494949"
+        android:textSize="14sp" />
+    
+    <ImageView
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="#ff3f3f3f" />
+    
+    <Button
+        android:id="@+id/btn_input_ok"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/button_login_pop_selector"
+        android:text="确定"
+        android:textColor="#ff494949"
+        android:textSize="14sp" />
+
+    </LinearLayout>
+
+</com.huiwei.roomreservation.view.PhoneOrderConfirmView>

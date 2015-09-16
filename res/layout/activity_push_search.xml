@@ -1,0 +1,105 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wrapper"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black9" >
+    
+    <!-- 搜索 -->
+    <LinearLayout
+	    android:id="@+id/main"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical">
+	    
+        <!-- 标题条 -->
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:layout_gravity="top"
+	    	android:gravity="center_vertical"
+	    	android:orientation="horizontal"
+	    	android:background="@drawable/bg_title"
+	    	>
+			<ImageButton 
+			    android:id="@+id/btnBack"
+			    android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:background="@drawable/btn_title_bg"
+	    		android:src="@drawable/btn_back"
+	    		android:onClick="doClick"
+			    />
+			<EditText
+			    android:id="@+id/keywords"
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:singleLine="true"
+			    android:maxLength="20"
+			    android:ems="10" >
+			    <requestFocus />
+			</EditText>
+			<ImageButton 
+	            android:id="@+id/btnSearch"
+	            android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	            android:background="@drawable/btn_title_bg"
+	            android:src="@drawable/btn_search_disabled"
+	            
+	    		android:onClick="doClick"
+	            />
+	    </LinearLayout>
+	    
+	    <!-- 二级导航 -->
+	    <FrameLayout 
+	        android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	        >
+	       <LinearLayout
+		        android:layout_width="fill_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal"
+		    	android:background="@color/black9">
+		        <Button 
+		            android:id="@+id/tabImage"
+		            style="@style/nav2"
+		    		android:text="@string/tab_image"
+		    		android:onClick="doClick"
+		            />
+		        <Button 
+		            android:id="@+id/tabMusic"
+		            style="@style/nav2"
+		    		android:text="@string/tab_music"
+		    		android:onClick="doClick"
+		            />
+		        <Button 
+		            android:id="@+id/tabVideo"
+		            style="@style/nav2"
+		    		android:text="@string/tab_video"
+		    		android:onClick="doClick"
+		            />
+		    </LinearLayout>
+		    
+		    <ImageView 
+		        android:id="@+id/tabCurrent"
+		        android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:background="@drawable/tab_current"
+		    	android:layout_gravity="bottom"
+		        />
+		    
+	    </FrameLayout>
+	    
+	    <!-- 列表 -->
+	    <ListView
+	        android:id="@+id/listView"
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+			android:cacheColorHint="#00000000" 
+			android:divider="@drawable/line_black" >
+	    </ListView>
+
+	</LinearLayout>
+
+</FrameLayout>

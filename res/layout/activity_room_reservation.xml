@@ -1,0 +1,343 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff3f3f3"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/title_bg" >
+
+        <ImageView
+            android:id="@+id/iv_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_back_selector"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/title"
+            android:text="包间预订" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_title"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/room_info_view"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                layout="@layout/room_info_view" />
+
+            <LinearLayout
+                android:id="@+id/layout_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/tv_time_title"
+                        style="@style/input_title"
+                        android:layout_centerVertical="false"
+                        android:layout_marginTop="10dp"
+                        android:text="预订时间：" />
+
+                    <EditText
+                        android:id="@+id/et_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignBaseline="@+id/tv_time_title"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/iv_cal"
+                        android:layout_toRightOf="@+id/tv_time_title"
+                        android:inputType="none"
+                        android:textSize="@dimen/size_13sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_cal"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/calendar_icon" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/et_date"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/tv_time_title" >
+
+                        <Button
+                            android:id="@+id/btn_today"
+                            style="@style/button_type"
+                            android:layout_weight="1"
+                            android:background="@drawable/type_selected"
+                            android:text="今天" />
+
+                        <Button
+                            android:id="@+id/btn_tomorrow"
+                            style="@style/button_type"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/type_unselected"
+                            android:text="明天" />
+
+                        <Button
+                            android:id="@+id/btn_after_tomorrow"
+                            style="@style/button_type"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/type_unselected"
+                            android:text="后天" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/tv_type_title"
+                        style="@style/input_title"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="false"
+                        android:layout_marginTop="5dp"
+                        android:text="预订档期：" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_type_title" >
+
+                        <include
+                            android:id="@+id/view_time_slot"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            layout="@layout/time_slot_view" />
+
+                        <ProgressBar
+                            android:id="@+id/pb_time_slot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/tv_person_title"
+                        style="@style/input_title"
+                        android:text="联系人：" />
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignBaseline="@+id/tv_person_title"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toLeftOf="@+id/iv_contacts"
+                        android:layout_toRightOf="@+id/tv_person_title"
+                        android:textSize="@dimen/size_13sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_contacts"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/contacts_icon" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" >
+
+                    <TextView
+                        android:id="@+id/tv_phone_title"
+                        style="@style/input_title"
+                        android:text="联系电话：" />
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignBaseline="@+id/tv_phone_title"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_phone_title"
+                        android:inputType="phone"
+                        android:textSize="@dimen/size_13sp" />
+                </RelativeLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" >
+                    
+                    <TextView
+                        style="@style/input_title"
+                        android:layout_gravity="center_vertical"
+                        android:text="称 呼：" />
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="11dp" >
+
+                <Button
+                    android:id="@+id/btn_male"
+                    style="@style/button_type"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/type_unselected"
+                    android:text="先生" />
+
+                <Button
+                    android:id="@+id/btn_female"
+                    style="@style/button_type"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/type_unselected"
+                    android:text="女士" />
+                
+                <Button
+                    style="@style/button_type"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/type_unselected"
+                    android:visibility="invisible" />
+                
+                </LinearLayout>
+            </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/tv_type_title"
+                        style="@style/input_title"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="false"
+                        android:layout_marginTop="5dp"
+                        android:text="预订类型：" />
+
+                    <include
+                        android:id="@+id/view_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_type_title"
+                        layout="@layout/time_slot_view" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp" >
+
+                    <TextView
+                        android:id="@+id/tv_phone_title"
+                        style="@style/input_title"
+                        android:text="备注信息：" />
+
+                    <EditText
+                        android:id="@+id/et_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignBaseline="@+id/tv_phone_title"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_phone_title"
+                        android:hint="其他特殊要求..."
+                        android:textSize="@dimen/size_13sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_reservation"
+                style="@style/button_text_shadow"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_orange_selector"
+                android:gravity="center"
+                android:text="确认预订" />
+
+            <LinearLayout
+                android:id="@+id/layout_tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/tips_text_bg"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/input_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="商家提示：" />
+
+                <TextView
+                    android:id="@+id/tv_tips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="商家提示："
+                    android:textColor="#ff3f3f3f"
+                    android:textSize="@dimen/size_12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        layout="@layout/loading_view"
+        android:visibility="gone" />
+
+</RelativeLayout>

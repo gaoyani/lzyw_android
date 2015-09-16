@@ -1,0 +1,286 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background" >
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_bg" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/title"
+            android:text="汇为乐汇" />
+
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_menu_selector" />
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/city_awwor_b"
+            android:gravity="center"
+            android:text="北京"
+            android:textColor="#ff000000"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+<!--     <ScrollView -->
+    <com.huiwei.roomreservation.baseview.InterceptScrollView
+
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_title"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <requestFocus />
+
+            <LinearLayout
+                android:id="@+id/layout_classify_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <include
+                    android:id="@+id/classify_view_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    layout="@layout/classify_item_view" />
+
+                <include
+                    android:id="@+id/classify_view_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    layout="@layout/classify_item_view" />
+
+                <include
+                    android:id="@+id/classify_view_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    layout="@layout/classify_item_view" />
+
+                <include
+                    android:id="@+id/classify_view_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    layout="@layout/classify_item_view" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_classify_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <include
+                    android:id="@+id/classify_view_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    layout="@layout/classify_item_view" />
+
+                <include
+                    android:id="@+id/classify_view_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    layout="@layout/classify_item_view" />
+
+                <include
+                    android:id="@+id/classify_view_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    layout="@layout/classify_item_view" />
+
+                <include
+                    android:id="@+id/classify_view_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    layout="@layout/classify_item_view" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff8f8f8" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/recommend_msg_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="乐优惠"
+                        android:textColor="#ffffffff"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_recommend_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="5dp"
+                        android:clickable="true"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:singleLine="true"
+                        android:text="促销活动：权金城洗浴中心线上预订！充1000送50"
+                        android:textColor="#ff404040" />
+
+                    <requestFocus />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="4dp"
+                    android:orientation="horizontal" >
+
+                    <include
+                        android:id="@+id/view_recommend_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="2dp"
+                        android:layout_weight="1"
+                        layout="@layout/recommend_picture_view" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <include
+                            android:id="@+id/view_recommend_right_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1"
+                            layout="@layout/recommend_picture_view" />
+
+                        <include
+                            android:id="@+id/view_recommend_right_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            layout="@layout/recommend_picture_view" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff8f8f8" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/recommend_msg_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="乐精选"
+                    android:textColor="#ffffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:ellipsize="end"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="#fff8f8f8" />
+            </LinearLayout>
+
+            <com.huiwei.roomreservation.baseview.XListView
+                android:id="@+id/lv_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/store_item_split"
+                android:dividerHeight="1px"
+                android:gravity="center" />
+        </LinearLayout>
+   </com.huiwei.roomreservation.baseview.InterceptScrollView>
+<!--     </ScrollView> -->
+
+    <Button
+        android:id="@+id/iv_favorite_icn"
+        style="@style/favorite_tip_pop"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/layout_store_float"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="150dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/store_button_bg" />
+
+        <ImageButton
+            android:id="@+id/ib_store_float_cancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/store_button_cancel" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        layout="@layout/loading_view"
+        android:visibility="gone" />
+
+</RelativeLayout>

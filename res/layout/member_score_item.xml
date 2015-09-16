@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="#ffffffff"
+    android:minHeight="60dp" >
+
+        <TextView
+            android:id="@+id/tv_store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="上岛咖啡--牡丹园店"
+            android:textColor="#ff4f4f4f"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_store_name"
+            android:layout_below="@+id/tv_store_name"
+            android:layout_marginTop="5dp"
+            android:text="2014年7月8日"
+            android:textColor="#ff6f6f6f"
+            android:textSize="12sp" />
+        
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_price"
+            android:text="消费奖励"
+            android:textColor="#ff0073ff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="￥35"
+            android:textColor="#ffff0000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_alignParentBottom="true"
+          android:layout_below="@+id/iv_store_icon"
+          android:background="#fff3bf69" />
+
+</RelativeLayout>
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.huiwei.roomreservation.view.BottomTabView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/tab_bg"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/rb_comment"
+        style="@style/main_tab"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/tab_store_bg_selector"
+        android:src="@drawable/store_tab_comment" />
+
+    <ImageView
+        android:id="@+id/rb_navigation"
+        style="@style/main_tab"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/tab_store_bg_selector"
+        android:src="@drawable/store_tab_navigation" />
+
+    <ImageView
+        android:id="@+id/rb_share"
+        style="@style/main_tab"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/tab_store_bg_selector"
+        android:src="@drawable/store_tab_share" />
+
+    <ImageView
+        android:id="@+id/rb_complaint"
+        style="@style/main_tab"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/tab_store_bg_selector"
+        android:src="@drawable/store_tab_complaint" />
+
+</com.huiwei.roomreservation.view.BottomTabView>

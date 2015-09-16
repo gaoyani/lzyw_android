@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transprant">#00000000</color>
+    <color name="background">#ffffffff</color>
+    <color name="title">#ffffffff</color>
+    <color name="title_bg">#ffff8500</color>
+    <color name="highlight_text">#ffff8500</color>
+    <color name="tips_text">#ff818182</color>
+    <color name="tips_text_small">#ff545454</color>
+    <color name="tips_text_bg">#fff8f8f8</color>
+    <color name="button_disable">#ffdfdfdf</color>
+    <color name="link_text">#ff3e92f2</color>
+    
+    <color name="menu_item_disable">#ffc7c7c7</color>
+    <color name="menu_text_disable">#ff9f9f9f</color>
+    <color name="menu_item_selected">#fffff6ef</color>
+    <color name="menu_text">#ff742c00</color>
+    <color name="store_item_split">#ffc5c5c5</color>
+    
+    <color name="room_bookable">#ffffba80</color>
+    <color name="room_booked">#ffff8f80</color>
+    <color name="room_booked_full">#ffc8c8c8</color>
+    
+    <color name="login_pop_bg">#fff7f7f7</color>
+    <color name="login_pop_title">#ff3eb1dd</color>
+    
+    <color name="order_mouth_bg">#ffffd7c4</color>
+    
+    <color name="rangebar_color">#ffd3cac1</color>
+    <color name="rangebar_line_color">#fffc8505</color>
+    <!-- @zhangtw -->
+    <color name="bg">#f3f3f3</color>
+    <color name="black">#000</color>
+    <color name="black9">#333333</color>
+    <color name="black8">#666666</color>
+    <color name="white">#fff</color>
+    <color name="gray">#ccc</color>
+    <color name="info">#999</color>
+    <color name="text_default">#333333</color>
+    <color name="text_btn">#333333</color>
+    <color name="text_em">#f60</color>
+    <color name="nav_current">#ff9900</color>
+    <color name="shadow_color">#ff000000</color>
+    <color name="result_view">#b0000000</color>
+  	<color name="viewfinder_laser">#ffff0000</color>
+  	<color name="viewfinder_mask">#60000000</color>
+  	<color name="possible_result_points">#c0ffff00</color>
+  	<color name="tag0">#F9AfBC</color>  
+  	<color name="tag1">#E2D3D6</color>  
+  	<color name="tag2">#C0B4B8</color>  
+  	<color name="tag3">#8A7379</color>  
+  	<color name="tag4">#E3D2A4</color>  
+  	<color name="tag5">#AAC494</color>  
+  	<color name="tag6">#85B07A</color>  
+  	<color name="tag7">#778878</color>  
+  	<color name="tag8">#D3B495</color>  
+  	<color name="tag9">#E7E6CA</color>  
+    
+    <color name="pop_dialog_bg">#fffff5e9</color> 
+    <color name="pop_dialog_title_bg">#ffffbf79</color> 
+    
+    <color name="comment_item_bg">#fff2f3ee</color> 
+    
+</resources>

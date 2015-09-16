@@ -1,0 +1,15 @@
+<resources>
+	<dimen name="padding">20dp</dimen>
+	<dimen name="padding_middle">10dp</dimen>
+	<dimen name="padding_small">5dp</dimen>
+	<dimen name="padding_mini">3dp</dimen>
+    <dimen name="padding_btn">50dp</dimen>
+    <dimen name="padding_select">76dp</dimen>
+    
+    <dimen name="text">18sp</dimen>
+    <dimen name="text_nav">18sp</dimen>
+    <dimen name="text_middle">14sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_big">22sp</dimen>
+    <dimen name="image">60dp</dimen>
+</resources>

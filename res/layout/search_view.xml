@@ -1,0 +1,260 @@
+<com.huiwei.roomreservation.view.SearchView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.huiwei.roomreservation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout
+        android:id="@+id/layout_search"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/menu_bg" >
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="检索条件"
+            android:textColor="#ff000000"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffffff" />
+
+            <TextView
+                android:id="@+id/tv_city_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="城市"
+                android:textColor="#ff000000"
+                android:textSize="13sp" />
+            
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_city_title"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_city_title"
+                android:textColor="@color/highlight_text"
+                android:textSize="20sp" />
+            
+            <TextView
+                android:id="@+id/tv_area_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_city"
+                android:layout_alignBaseline="@+id/tv_city_title"
+                android:layout_marginLeft="20dp"
+                android:text="区域"
+                android:textColor="#ff000000"
+                android:textSize="13sp" />
+            
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_area_title"
+                android:layout_alignBaseline="@+id/tv_city_title"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/highlight_text"
+                android:textSize="20sp" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffffff" />
+
+            <TextView
+                android:id="@+id/tv_ba_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="商圈"
+                android:textColor="#ff000000"
+                android:textSize="13sp" />
+            
+            <TextView
+                android:id="@+id/tv_region"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_ba_title"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_ba_title"
+                android:textColor="@color/highlight_text"
+                android:textSize="20sp" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffffff" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:text="规格"
+                android:textColor="#ff000000"
+                android:textSize="13sp" />
+            
+            <LinearLayout
+                android:id="@+id/layout_room_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/tv_title"
+                android:orientation="vertical" >
+                
+            </LinearLayout>
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffffff" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="人均"
+                android:textColor="#ff000000"
+                android:textSize="13sp" />
+            
+            <TextView
+                android:id="@+id/tv_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="不限"
+                android:textColor="#ff000000"
+                android:textSize="10sp" />
+            
+            <TextView
+                android:id="@+id/tv_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_max"
+                android:layout_alignLeft="@+id/rangebar1"
+                android:layout_marginLeft="5dp"
+                android:text="￥0"
+                android:textColor="#ff000000"
+                android:textSize="10sp" />
+            
+            <com.edmodo.rangebar.RangeBar
+                android:id="@+id/rangebar1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_title"
+                android:layout_below="@+id/tv_max"
+                app:barColor="#d3cac1"
+                app:barWeight="6dp"
+                app:connectingLineColor="#fc8505"
+                app:connectingLineWeight="6dp"
+                app:tickCount="100"
+                app:tickHeight="0dp" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffffff" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="推荐度"
+                android:textColor="#ff000000"
+                android:textSize="13sp" />
+                
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/search_ratingbar_style"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_title"
+                    android:isIndicator="false" />
+                
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/ratingBar"
+                android:text="≥3星商户"
+                android:textSize="12sp" />
+            
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ffffffff" />
+        </RelativeLayout>
+        
+        
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/layout_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_orange_selector"
+        android:text="筛选"
+        style="@style/button_text_shadow" />
+    </RelativeLayout>
+
+</com.huiwei.roomreservation.view.SearchView>

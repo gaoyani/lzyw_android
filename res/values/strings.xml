@@ -1,0 +1,353 @@
+<resources>
+
+    <string name="app_name">汇为乐汇</string>
+    <string name="exit_app">再按一次返回键退出程序</string>
+    <string name="ren">人</string>
+    <string name="yuan">￥</string>
+    <string name="colon">：</string>
+    <string name="star">星</string>
+    <string name="account">账户</string>
+    <string name="integral">积分</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="comment">评价</string>
+    <string name="comment_commit">提交</string>
+    <string name="limitless">无限</string>
+    <string name="modify_login_password">修改登录密码</string>
+    <string name="modify_pay_password">修改支付密码</string>
+    <string name="reset_pay_password">忘记支付密码</string>
+    <string name="set_pay_password">设置支付密码</string>
+    
+    <string name="network_unconnect">没有连接wifi，请连接后重新打开App</string>
+    <string name="network_connect">已连接网络，您可以上网了</string>
+    <string name="network_exception">网络连接异常，请检查网络</string>
+
+    <string name="store_scene">乐商户</string>
+    <string name="menu_store">商户场景</string>
+    <string name="menu_member">乐会员</string>
+    <string name="menu_control">乐遥控</string>
+    <string name="menu_push">乐推屏</string>
+    <string name="menu_search">乐搜索</string>
+    <string name="menu_share">乐分享</string>
+    <string name="menu_scan">乐扫扫</string>
+    <string name="menu_update">版本更新</string>
+    <string name="menu_setting">设&#160;&#160;&#160;&#160;置</string>
+    <string name="menu_about">关&#160;&#160;&#160;&#160;于</string>
+    
+    <string name="classify_xy">洗浴</string>
+    <string name="classify_zl">足疗</string>
+    <string name="classify_ktv">KTV</string>
+    <string name="classify_hs">会所</string>
+    <string name="classify_cybf">餐饮包房</string>
+    <string name="classify_cskf">茶室咖啡</string>
+    <string name="classify_mrmt">美容美体</string>
+    <string name="classify_gd">更多</string>
+    
+    <string name="room_bookable_button">预订</string>
+    <string name="room_booked_full_button">订满</string>
+    
+    <string name="xlistview_footer_hint_normal">更多>></string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="xlistview_footer_hint_complete">所有数据加载完成</string>
+    <string name="xlistview_footer_no_rooms">暂无包间信息</string>
+    <string name="xlistview_footer_no_comment">暂无评论</string>
+    <string name="xlistview_footer_no_order">暂无订单</string>
+    
+    <string name="login">登录</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_fail">登录失败</string>
+    <string name="please_input_login_user_name">请输入登录的用户名或手机号码</string>
+    <string name="please_input_login_password">请输入密码</string>
+    <string name="logout_success">注销成功</string>
+    <string name="logout_fail">注销失败</string>
+
+    <string name="register_success">注册成功</string>
+    <string name="register_fail">注册失败</string>
+    <string name="get_auth_code">获取验证码</string>
+    <string name="get_auth_code_fail">获取验证码失败</string>
+    <string name="second_reget">秒后可重新获取</string>
+	<string name="please_input_phone_num">请输入手机号码</string>
+	<string name="please_input_auth_code">请输入验证码</string>
+	<string name="auth_code_error">验证码错误</string>
+	<string name="auth_code_invalid">验证码失效</string>
+	<string name="not_set_safe_question">未设置安全问题</string>
+	<string name="password_number_error">请输入六位以上字符密码</string>
+    <string name="password_confirm_error">两次输入的密码不一致，请重新输入</string>
+    <string name="please_read_agreement">请阅读《汇为乐汇手机应用软件用户注册及使用协议》</string>
+    <string name="agreement">汇为乐汇手机应用软件用户注册及使用协议</string>
+    
+    <string name="modify_info_success">修改信息成功</string>
+    <string name="modify_info_fail">修改信息失败</string>
+    <string name="reset_password_success">重置密码成功，请用新密码登录</string>
+    <string name="reset_password_fail">重置密码失败</string>
+    <string name="modify_login_password_success">修改登录密码成功，以后请用新密码登录</string>
+    <string name="modify_login_password_fail">修改登录密码失败</string>
+    <string name="modify_pay_password_success">修改支付密码成功，以后请用新密码登录</string>
+    <string name="modify_pay_password_fail">修改支付密码失败</string>
+    <string name="modify_phone_number_success">修改手机号码成功</string>
+    <string name="modify_phone_number_fail">修改手机号码失败</string>
+    <string name="set_pay_password_success">设置支付密码成功</string>
+    <string name="set_pay_password_fail">设置支付密码失败</string>
+    
+    <string name="phone_number_format_error">手机号码格式错误，请重新输入</string>
+    <string name="please_input_referrer_name">请输入推荐人姓名</string>
+    <string name="please_input_contact_name">请输入联系人姓名</string>
+    <string name="please_input_contact_number">请输入联系人电话</string>
+    <string name="no_safe_question">没有设置安全问题，请到常用设置页面设置</string>
+    <string name="safe_answer_error">安全问题回答错误，请重新输入</string>
+    <string name="linear_meter">米</string>
+    <string name="linear_measure">公里</string>
+    
+    <string name="share_error">获取分享信息失败，请点击分享重试</string>
+  
+    <!-- @zhangtw -->
+    <string name="le">乐商户</string>
+    <string name="rc">乐遥控</string>
+    <string name="push">乐推屏</string>
+    <string name="user">乐会员</string>
+    <string name="more">乐更多</string>
+    <string name="number1">1</string>
+    <string name="number2">2</string>
+    <string name="number3">3</string>
+    <string name="number4">4</string>
+    <string name="number5">5</string>
+    <string name="number6">6</string>
+    <string name="number7">7</string>
+    <string name="number8">8</string>
+    <string name="number9">9</string>
+    <string name="number0">0</string>
+    <string name="cannel">频道</string>
+    <string name="voice">声音</string>
+    <string name="mouse_keyboard">鼠标键盘</string>
+    <string name="tab_common">常用</string>
+    <string name="tab_image">图片</string>
+    <string name="tab_music">音乐</string>
+    <string name="tab_video">视频</string>
+    <string name="tab_cloud">云资源</string>
+    <string name="set_common">设为常用？</string>
+    <string name="cancel_common">取消常用？</string>
+    <string name="setting_success">设置成功！</string>
+    <string name="setting_failed">设置失败！</string>
+    <string name="isacommon">已经是常用！</string>
+    <string name="tab_setting_scan">乐扫扫</string>
+    <string name="menu_shake">乐摇摇</string>
+    <string name="tab_setting_game">乐游戏</string>
+    <string name="tab_setting_fiance">乐理财</string>
+    <string name="setting">设置</string>
+    <string name="setting_rc">乐遥控设置</string>
+    <string name="setting_push">乐推送设置</string>
+    <string name="setting_shake">乐摇摇设置</string>
+    <string name="setting_logout">退出</string>
+    <string name="setting_connect">连接机顶盒</string>
+    <string name="setting_scan">扫描二维码连接机顶盒</string>
+    <string name="setting_auto_scan">搜索局域网内机顶盒</string>
+    <string name="connect">连接</string>
+    <string name="delete">删除</string>
+    <string name="confirm_delete">确定删除？</string>
+    <string name="connecting">连接中...\n可能需要几分钟时间！</string>
+    <string name="scanning">搜索中...\n%1$s</string>
+    <string name="info_not_connect">还未连接机顶盒！</string>
+    <string name="status_connected">已连接</string>
+    <string name="status_not_connect">未连接</string>
+    <string name="setting_server_count">设置机顶盒显示数量</string>
+    <string name="setting_vibration">设置按键振动强度</string>
+    <string name="setting_sensitivity">设置按键振动灵敏度</string>
+    <string name="setting_push_common_count">设置常用显示数量</string>
+    <string name="tv_name">请选择推送端TV</string>
+    <string name="no_dmr">当前没有可推送的TV</string>
+    <string name="no_commonlist">常用列表为空，请添加常用</string>
+    <string name="levip">乐会员</string>
+    <string name="youhuihuodong">优惠活动</string>
+    <string name="vip_center">会员中心</string>
+    <string name="le_pay">乐支付</string>
+    <string name="info">详细信息</string>
+    <string name="user_book">我的预定</string>
+    <string name="user_past">消费记录</string>
+    <string name="daijinquan">代金券</string>
+    <string name="input_email">请输入邮箱</string>
+    <string name="input_password">请输入密码</string>
+    <string name="register"><u>注册</u></string>
+    <string name="vip_youhui">会员优惠</string>
+    <string name="name">姓         名:</string>
+    <string name="zhengjian">证件类型:</string>
+    <string name="phone">联系电话:</string>
+    <string name="email">电子邮箱:</string>
+    <string name="useraddress">通讯地址:</string>
+    <string name="zhengjianhaoma">证件号码:</string>
+    <string name="info_title">会员详细信息</string>
+    <string name="order_info">账单详情</string>
+    <string name="editnull">输入不能为空</string>
+    <string name="emailerro">请输入正确邮箱地址</string>
+    <string name="passworderro">密码不能为空</string>
+    <string name="confim_password">请再次输入密码</string>
+    <string name="confir_pay">确认支付</string>
+    <string name="leshangwu">乐商务</string>
+    <string name="search">搜索</string>
+    <string name="collect">收藏</string>
+    <string name="share">分享</string>
+    <string name="yuding">预订</string>
+    <string name="vipyuding">会员预订</string>
+    <string name="person_num_hint">请输入人数</string>
+    <string name="yuding_phone_edit_hint">请输入联系电话</string>
+    <string name="yuding_beizhu_edit_hint">备注信息</string>
+    <string name="comple_yuding">完成预订</string>
+    <string name="goon_food_tag">继续点菜</string>
+    <string name="add">添加</string>
+    <string name="caidan">菜单</string>
+    <string name="diancai">点菜</string>
+    <string name="paystyle">支付方式:</string>
+    <string name="hotel">酒店</string>
+    <string name="restaurant">餐馆</string>
+    <string name="sec_suijiama">根据电视画面提示选择正确的乐享验证码</string>
+    <string name="downtitle">下载提示</string>
+    <string name="download">下载</string>
+    <string name="canel">取消</string>
+    <string name="color_btn_4">加 水</string>
+    <string name="color_btn_3">服 务</string>
+    <string name="color_btn_2">点 餐</string>
+    <string name="color_btn_1">结 账</string>
+    
+    <!-- @-->
+    <string name="check_up">检查更新</string>
+    <string name="al_new_ver">已是最新版本</string>
+    <string name="le_shangjia">乐商家</string>
+    <string name="finding">正在搜索</string>
+    <string name="sharefr">分享给好友</string>
+    <string name="leshare">乐分享</string>
+    <string name="isshare">是否分享给好友?</string>
+    <string name="connotice">是否进行连接</string>
+    <string name="connectaction">com.luxshare.connect</string>
+    <string name="finsh_toast">再按一次退出乐商务</string>
+    <string name="opengpsnotice">提高位置经度</string>
+    <string name="gpsmessage">是否开启GPS</string>
+    <string name="nomorenotice">不再提醒我</string>
+    <string name="main_pager">商户主页</string>
+    <string name="leftButtonInfo">左键单击确定</string>
+    <string name="rightButtonInfo">右键单击返回</string>
+    
+    <string name="scan_text">将二维码/条形码放置框内，即开始扫描</string>
+    <string name="open_website">是否打开链接？</string>
+    
+    <string name="not_sufficient_funds">账户余额不足，请先充值或选择其他方式支付</string>
+    <string name="please_input_recharge_money">请输入充值金额</string>
+    <string name="please_input_search_key">请输入搜索关键字</string>
+    <string name="no_related_store">没有搜索到相关商家</string>
+    <string name="unlogin_share">您还没有登录，是否继续分享？</string>
+    <string name="unlogin">您还没有登录，请先登录</string>
+    <string name="not_set_pay_password">您还没有设置支付密码，请先设置支付密码</string>
+    <string name="version_update">版本更新</string>
+    <string name="latest_version">目前已经是最新版本</string>
+    
+    <string name="recharge">充值</string>
+    <string name="input_recharge_money">请输入充值金额</string>
+    <string name="recharge_order_create_fail">充值订单创建失败</string>
+    <string name="recharge_order_confirm_fail">充值订单更新失败</string>
+    <string name="payment_fail">订单支付失败</string>
+    <string name="payment_success">订单支付成功</string>
+    <string name="recharge_success">充值成功</string>
+    <string name="recharge_fail">充值失败</string>
+    
+    <string name="about_info">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;“汇为乐汇”是面向商务休闲人士的手机应用软件。本软件的下载、安装完全免费，使用过程中可能产生的数据流量费用，由运营商收取。</string>
+    <string name="about_info_2">《汇为乐汇软件许可及服务协议》</string>
+    <string name="about_app_name">“汇为乐汇”</string>
+    <string name="about_company_name">乐自（北京）科技有限公司 版权所有</string>
+    <string name="about_copyright">Copyright @2014 Luxspace.All Rights Reserved.</string>
+    <string name="about_agreement_name">《汇为乐汇软件许可及服务协议》</string>
+    
+    <string name="choose_store_scene">请选择商户场景</string>
+    <string name="no_store_scene">当前无商户场景</string>
+    <string name="no_store_web">商户网站正在建设中，敬请期待</string>
+    
+    <string name="choose_news">请选择优惠资讯</string>
+    
+    <string name="please_login_collect">请先登录再收藏商家</string>
+    <string name="collect_already">该商家已收藏</string>
+    <string name="collecting">收藏中…</string>
+    <string name="collect_success">收藏成功</string>
+    <string name="collect_cancel">取消收藏成功</string>
+    
+   <string name="hint_login_name"> 请输入手机号或用户名…</string>
+    <string name="hint_user_name">设置登录用户名…</string>
+    <string name="hint_nickname">设置昵称…</string>
+    <string name="hint_real_name">请填写姓名…</string>
+    <string name="hint_phone_number">请输入手机号码…</string>
+    <string name="hint_new_phone_number">请输入新手机号码…</string>
+    <string name="hint_old_phone_number">请输入原手机号码…</string>
+    <string name="hint_register_password">请输入六位以上注册密码…</string>
+    <string name="hint_password">请输入密码…</string>
+    <string name="hint_old_pwd">请输入原密码…</string>
+    <string name="hint_new_pwd">请输入新密码…</string>
+    <string name="hint_confirm_pwd">请再次输入密码…</string>
+    <string name="hint_auth_code">请输入验证码…</string>
+    <string name="hint_safe_question">请填写安全问题…</string>
+    <string name="hint_safe_answer">请填写安全问题回答…</string>
+    <string name="hint_email">email…</string>
+    <string name="hint_birthday">生日(有机会得到惊喜呦)…</string>
+    <string name="hint_bill_title">发票抬头…</string>
+    <string name="hint_address">邮寄地址(用于邮寄发票)…</string>
+    <string name="hint_id_number">证件号码(用于住宿预订登记)…</string>
+    
+    <string name="loading">正在加载…</string>
+    <string name="submiting">正在提交…</string>
+    <string name="registering">正在注册…</string>
+    <string name="logging">正在登录…</string>
+    <string name="paying">正在支付…</string>
+    <string name="pay_checking">正在验证…</string>
+    <string name="locating">正在定位…</string>
+    <string name="navigating">正在导航…</string>
+    
+    <string name="can_not_comment">未预订该商户或订单未完成</string>
+    <string name="comment_already">已点评</string>
+    <string name="comment_recommend_level">推荐度：</string>
+    <string name="comment_hot_level">热度：</string>
+    <string name="comment_room_num">包 间：</string>
+    <string name="comment_people_num">人数：</string>
+    <string name="comment_address">地址：</string>
+    <string name="comment_room_type">规格：</string>
+    <string name="comment_success">评论提交成功</string>
+    <string name="comment_fail">评论提交失败</string>
+    <string name="complaint_success">投诉提交成功</string>
+    <string name="complaint_fail">投诉提交失败</string>
+    <string name="complaint_already">已投诉</string>
+    <string name="complaint_already_msg">您已投诉过该商户</string>
+    
+    <string name="order_cancel">取消订单</string>
+    <string name="order_comment">我要点评</string>
+    <string name="order_confirm">确认订单</string>
+    <string name="order_delete">删除订单</string>
+    <string name="order_reorder">再次预订</string>
+    <string name="order_pay">立即支付</string>
+    <string name="sub_order_delete">退订</string>
+    <string name="sub_order_reorder">预订变更</string>
+    <string name="sub_order_reorder_success">预订变更成功</string>
+    <string name="sub_order_reorder_fail">预订变更失败</string>
+    <string name="order_operation_success">订单处理成功</string>
+    <string name="order_operation_fail">订单处理失败</string>
+    
+    <string name="remote_call_failed">连接远程服务器失败</string>
+    <string name="upload_info_fail">提交信息失败</string>
+    <string name="load_data_fail">加载数据失败</string>
+    <string name="no_network">网络连接不可用，请稍后重试</string>
+    
+    <string name="no_such_city">该城市暂未开通</string>
+    <string name="my_location">我的位置</string>
+    <string name="not_route_line">没有找到线路，请检查地址是否输入正确</string>
+    <string name="already_login">您的账号已在另一个设备登陆，是否继续登陆？</string>
+    <string name="auto_logout">您的帐号在另一个设备登录，您被迫下线，如果这不是您本人操作，那么您的密码可能已经泄露，建议修改密码</string>
+    
+    <string-array name="item">  
+        <item>拍照</item>  
+        <item>相册</item>
+    </string-array>  
+    
+    <string-array name="pay_item">  
+        <item>支付宝</item>
+        <item>银联支付</item>  
+    </string-array>  
+    
+    <item type="id" name="tag_holder"></item>
+	<item type="id" name="tag_index"></item>
+	
+	<item type="id" name="tag_operation"></item>
+    
+</resources>

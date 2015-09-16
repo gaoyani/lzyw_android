@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/le_more" android:title="@string/more"></item>
+    <item android:id="@+id/isao" android:title="@string/tab_setting_scan"></item>
+    <item android:id="@+id/le_vip_m" android:title="@string/levip"></item>
+    <item android:id="@+id/leshare" android:title="@string/sharefr"></item>
+    
+
+</menu>

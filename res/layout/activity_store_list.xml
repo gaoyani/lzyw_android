@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/title_bg" >
+
+        <ImageView
+            android:id="@+id/iv_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_back_selector"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/title"
+            android:text="洗浴" />
+
+        <ImageButton
+            android:id="@+id/btn_search"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_filter_selector" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_top_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_title"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_recommend"
+            style="@style/top_tab"
+            android:text="推荐" />
+
+        <Button
+            android:id="@+id/btn_around"
+            style="@style/top_tab"
+            android:text="周边" />
+
+        <Button
+            android:id="@+id/btn_favorite"
+            style="@style/top_tab"
+            android:text="收藏" />
+    </LinearLayout>
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_top_tab"/>
+
+    <Button
+        android:id="@+id/iv_favorite_icn"
+        style="@style/favorite_tip_pop"
+        android:visibility="gone" />
+    
+    <include 
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/loading_view"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+    
+    <include
+        android:id="@+id/view_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/layout_title"
+        layout="@layout/search_view" />
+
+</RelativeLayout>

@@ -1,0 +1,205 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.huiwei.roomreservation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fffff1e4" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/title_bg" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/title"
+                android:text="设置" />
+
+            <ImageButton
+                android:id="@+id/btn_return"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_back_selector" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff" >
+
+            <TextView
+                android:id="@+id/tv_city_title"
+                style="@style/edit_input"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:text="设置默认城市"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="北京"
+                android:textColor="@color/highlight_text"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <ImageView style="@style/splite_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff" >
+
+            <TextView
+                style="@style/edit_input"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:text="商户场景提示"
+                android:textSize="15sp" />
+            
+            <com.huiwei.roomreservation.common.WiperSwitch
+                android:id="@+id/switch_store_scene"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp" />
+  
+        </RelativeLayout>
+        
+        <ImageView style="@style/splite_line" />
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff" >
+
+            <TextView
+                style="@style/edit_input"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:text="用户自动登录"
+                android:textSize="15sp" />
+            
+            <com.huiwei.roomreservation.common.WiperSwitch
+                android:id="@+id/switch_auto_login"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp" />
+  
+        </RelativeLayout>
+
+        <ImageView style="@style/splite_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff" >
+
+            <TextView
+                style="@style/edit_input"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:text="乐遥控按键震动强度"
+                android:textSize="15sp" />
+            
+            <com.edmodo.rangebar.RangeBar
+                android:id="@+id/intensity_bar"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                app:barColor="#fc8505"
+                app:barWeight="6dp"
+                app:connectingLineColor="#d3cac1"
+                app:connectingLineWeight="6dp"
+                app:tickCount="5"
+                app:tickHeight="10dp" />
+        </RelativeLayout>
+
+        <ImageView style="@style/splite_line" />
+
+       <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff" >
+
+            <TextView
+                style="@style/edit_input"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:text="乐遥控按键灵敏度"
+                android:textSize="15sp" />
+            
+            <com.edmodo.rangebar.RangeBar
+                android:id="@+id/sensitivity_bar"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                app:barColor="#fc8505"
+                app:barWeight="6dp"
+                app:connectingLineColor="#d3cac1"
+                app:connectingLineWeight="6dp"
+                app:tickCount="5"
+                app:tickHeight="10dp" />
+            
+        </RelativeLayout>
+
+        <ImageView style="@style/splite_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff" >
+
+            <TextView
+                android:id="@+id/tv_normal_info"
+                style="@style/edit_input"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:text="账号设置"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/iv_enter"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/enter_icon" />
+        </RelativeLayout>
+
+        <ImageView style="@style/splite_line" />
+    </LinearLayout>
+    
+    <Button 
+        android:id="@+id/btn_logout"
+        style="@style/reservation_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_quit_selector"
+        android:text="退出登录"
+        android:textSize="15sp"/>
+
+</RelativeLayout>

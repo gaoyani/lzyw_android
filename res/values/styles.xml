@@ -1,0 +1,245 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <style name="menu_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#7f7f7f</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+    
+    <style name="main_tab">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+    </style>
+    
+    <style name="top_tab">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/top_tab_up</item>
+    </style>
+    
+	<style name="input_title">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/size_14sp</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:shadowColor">#4d4d4d</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+    
+	<style name="store_info">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#ffa6a6a6</item>
+        <item name="android:paddingTop">2dp</item>	
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+    
+	<style name="reservation_button">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:shadowColor">#7f7f7f</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+    
+	<style name="button_text_shadow">
+        <item name="android:textSize">@dimen/size_15sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:shadowColor">#7f7f7f</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+    
+	<style name="title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+	<style name="edit_input">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:background">#ffffffff</item>
+        <item name="android:ems">10</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    
+	<style name="info_icon">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+    
+	<style name="cpp_scale">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:gravity">bottom|right</item>
+    </style>
+    
+    <style name="button_type">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:textSize">@dimen/size_11sp</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+    
+    <style name="selection_button_type">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">2dp</item>
+    </style>
+    
+    <style name="splite_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">#ffb0b0b0</item>
+    </style>
+    
+    <style name="button_search">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:background">@drawable/type_unselected</item>
+    </style>
+    
+    <style name="favorite_tip_pop">
+        <item name="android:layout_width">130dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:background">@drawable/favorite_tip</item>
+        <item name="android:text">收藏成功</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:shadowColor">#7f7f7f</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+    
+    <style name="member_info_layout_bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/member_info_table_bg</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+     <style name="comment_ratingbar_style" parent="@android:style/Widget.RatingBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:progressDrawable">@drawable/comment_rating_drawable_selector</item>
+        <item name="android:numStars">5</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxHeight">20dp</item>
+        <item name="android:max">5</item>
+        <item name="android:progress">5</item>
+    </style>
+    
+     <style name="store_ratingbar_style" parent="@android:style/Widget.RatingBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:progressDrawable">@drawable/store_rating_drawable_selector</item>
+        <item name="android:numStars">5</item>
+        <item name="android:minHeight">15dp</item>
+        <item name="android:maxHeight">15dp</item>
+        <item name="android:max">5</item>
+        <item name="android:progress">5</item>
+    </style>
+    
+     <style name="search_ratingbar_style" parent="@android:style/Widget.RatingBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:progressDrawable">@drawable/search_rating_drawable_selector</item>
+        <item name="android:numStars">5</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxHeight">20dp</item>
+        <item name="android:max">5</item>
+        <item name="android:progress">5</item>
+    </style>
+    
+      <!-- 二级导航 -->
+    <style name="nav2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">@dimen/padding_middle</item>
+        <item name="android:paddingBottom">@dimen/padding_middle</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/black8</item>
+        <item name="android:textSize">@dimen/text_nav</item>
+    </style>
+    <!-- @zhangtw-->
+    <style name="anim" parent="android:Animation">
+    	<item name="android:windowEnterAnimation">@anim/fade_in</item>
+    	<item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+    
+</resources>

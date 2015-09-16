@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background" >
+    
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_bg" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/title"
+            android:text="乐会员" />
+
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_menu_selector" />
+
+        <ImageButton
+            android:id="@+id/btn_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_back_selector" />
+    </RelativeLayout>
+
+<!--     <HorizontalScrollView -->
+<!--         android:id="@+id/layout_tab" -->
+<!--         android:layout_width="match_parent" -->
+<!--         android:layout_height="wrap_content" > -->
+
+        <LinearLayout
+            android:id="@+id/layout_top_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_title"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_1"
+                style="@style/top_tab"
+                android:layout_width="90dp"
+                android:text="会员信息" />
+
+            <Button
+                android:id="@+id/btn_2"
+                style="@style/top_tab"
+                android:layout_width="90dp"
+                android:text="我的订单" />
+
+            <Button
+                android:id="@+id/btn_3"
+                style="@style/top_tab"
+                android:layout_width="90dp"
+                android:text="我的评论" />
+
+            <Button
+                android:id="@+id/btn_4"
+                style="@style/top_tab"
+                android:layout_width="90dp"
+                android:text="积分明细" />
+
+        </LinearLayout>
+<!--     </HorizontalScrollView> -->
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_top_tab"/>
+<!--         android:background="#000000" -->
+<!--         android:flipInterval="30" -->
+<!--         android:persistentDrawingCache="animation"/>  -->
+
+</RelativeLayout>

@@ -1,0 +1,294 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fffff1e4" >
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/title_bg" >
+
+        <requestFocus />
+
+        <ImageView
+            android:id="@+id/iv_return"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_back_selector"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/title"
+            android:text="会员资料修改" />
+
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/button_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_title_bg_selector"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="保存" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_title" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffffff"
+                android:padding="10dp" >
+
+                <include
+                    android:id="@+id/view_member_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    layout="@layout/member_img_view" />
+
+                <TextView
+                    android:id="@+id/tv_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/view_member_img"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/view_member_img"
+                    android:text="设置头像"
+                    android:textColor="#ff000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_icon_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_icon"
+                    android:layout_below="@+id/tv_icon"
+                    android:layout_marginTop="5dp"
+                    android:text="大小 2M以内\n格式 jpg png"
+                    android:textColor="#ff000000"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_set_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/view_member_img"
+                    android:layout_alignLeft="@+id/tv_icon"
+                    android:background="@drawable/button_blue_up"
+                    android:padding="3dp"
+                    android:text="从手机选择头像"
+                    android:textColor="#ffffffff"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <ImageView style="@style/splite_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffffff" >
+
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    style="@style/info_icon"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/member_phone_icon" />
+
+                <TextView
+                    android:id="@+id/tv_phone_number"
+                    style="@style/edit_input"
+                    android:layout_toRightOf="@+id/iv_icon"
+                    android:gravity="center_vertical"
+                    android:text="12345654434"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_phone_edit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/member_info_edit"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" />
+            </RelativeLayout>
+
+            <ImageView style="@style/splite_line" />
+
+            <include
+                android:id="@+id/view_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/edit_input_view" />
+"
+
+            <include
+                android:id="@+id/view_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/edit_input_view" />
+
+            <include
+                android:id="@+id/view_real_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/edit_input_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ffffffff" >
+
+                <ImageView
+                    style="@style/info_icon"
+                    android:background="@drawable/member_sex_icon" />
+
+                <Button
+                    android:id="@+id/btn_male"
+                    style="@style/button_type"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/type_unselected"
+                    android:text="男" />
+
+                <Button
+                    android:id="@+id/btn_female"
+                    style="@style/button_type"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/type_unselected"
+                    android:text="女" />
+            </LinearLayout>
+
+            <ImageView style="@style/splite_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#ffffffff" >
+
+                <ImageView
+                    android:id="@+id/iv_icon_other_info"
+                    style="@style/info_icon"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/member_other_info_icon" />
+
+                <TextView
+                    android:id="@+id/tv_other_info"
+                    style="@style/edit_input"
+                    android:layout_toRightOf="@+id/iv_icon_other_info"
+                    android:gravity="center_vertical"
+                    android:text="设置常用信息"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_other_info"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/enter_icon"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#ffffffff" >
+
+                <ImageView
+                    android:id="@+id/iv_icon_login_password"
+                    style="@style/info_icon"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/login_password_icon" />
+
+                <TextView
+                    android:id="@+id/tv_login_password"
+                    style="@style/edit_input"
+                    android:layout_toRightOf="@+id/iv_icon_login_password"
+                    android:gravity="center_vertical"
+                    android:text="修改登录密码"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_login_password"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/enter_icon"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="#ffffffff" >
+
+                <ImageView
+                    android:id="@+id/iv_icon_pay_password"
+                    style="@style/info_icon"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/login_password_icon" />
+
+                <TextView
+                    android:id="@+id/tv_pay_password"
+                    style="@style/edit_input"
+                    android:layout_toRightOf="@+id/iv_icon_pay_password"
+                    android:gravity="center_vertical"
+                    android:text="修改支付密码"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_pay_password"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/enter_icon"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        layout="@layout/loading_view"
+        android:visibility="gone" />
+
+</RelativeLayout>

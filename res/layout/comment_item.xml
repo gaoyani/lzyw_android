@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="#ffffffff"
+    android:minHeight="80dp" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:background="@color/comment_item_bg"
+        android:padding="2dp" >
+    
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/store_info"
+        android:text="2014-7-8"
+        android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_time"
+            android:layout_toRightOf="@+id/tv_time"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="上岛咖啡"
+            android:textColor="#ff000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        
+        <TextView 
+            android:id="@+id/tv_layer"
+		    style="@style/store_info"
+        	android:text="1L"
+        	android:layout_alignParentRight="true"
+        	android:textSize="13sp"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/comment_ratingbar_style"
+            android:layout_alignParentRight="true"
+            android:isIndicator="true" />
+        
+		<TextView
+		    android:id="@+id/tv_comment"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/tv_nickname"
+		    android:scrollbars="vertical"
+		    android:text="上岛咖啡"
+		    android:textColor="#ff000000"
+		    android:textSize="13sp" />
+		
+		</RelativeLayout>
+
+</RelativeLayout>
+
