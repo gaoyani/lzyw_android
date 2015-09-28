@@ -6,23 +6,19 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.huiwei.commonlib.SyncImageLoader;
 import com.huiwei.roomreservation.R;
 import com.huiwei.roomreservation.activity.RoomReservationActivity;
 import com.huiwei.roomreservationlib.data.Constant;
 import com.huiwei.roomreservationlib.data.Data;
 import com.huiwei.roomreservationlib.data.OrderManager;
 import com.huiwei.roomreservationlib.info.OrderDetialInfo.SubOrderInfo;
-import com.huiwei.roomreservationlib.info.OrderDetialInfo;
-import com.huiwei.roomreservationlib.info.OrderInfo;
-import com.huiwei.roomreservationlib.task.order.OperationOrderTask;
 import com.huiwei.roomreservationlib.task.order.OperationSubOrderTask;
 
 public class SubOrderItemAdapter extends BaseAdapter {

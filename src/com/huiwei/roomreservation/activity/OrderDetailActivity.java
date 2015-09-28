@@ -1,60 +1,28 @@
 package com.huiwei.roomreservation.activity;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
-
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.util.DisplayMetrics;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnTouchListener;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
-import android.widget.RatingBar;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.huiwei.commonlib.SyncImageLoader;
 import com.huiwei.roomreservation.R;
-import com.huiwei.roomreservation.adapter.CommentItemAdapter;
-import com.huiwei.roomreservation.adapter.PicturePageAdapter;
-import com.huiwei.roomreservation.adapter.RoomItemAdapter;
 import com.huiwei.roomreservation.adapter.SubOrderItemAdapter;
 import com.huiwei.roomreservation.baseview.XListView;
-import com.huiwei.roomreservation.baseview.XListView.IXListViewListener;
-import com.huiwei.roomreservationlib.info.CommentInfo;
-import com.huiwei.roomreservationlib.info.StoreDetailInfo;
-import com.huiwei.roomreservationlib.info.StoreInfo;
-import com.huiwei.roomreservationlib.task.CommentListTask;
-import com.huiwei.roomreservationlib.task.StoreDetailTask;
-import com.huiwei.roomreservationlib.task.SubmitCommentTask;
-import com.huiwei.roomreservationlib.task.order.OrdeDetailTask;
+import com.huiwei.roomreservation.view.LoadingView;
 import com.huiwei.roomreservationlib.data.Constant;
 import com.huiwei.roomreservationlib.data.Data;
-import com.huiwei.roomreservation.view.LoadingView;
-import com.huiwei.roomreservation.view.PictureIndicatorView;
+import com.huiwei.roomreservationlib.info.CommentInfo;
+import com.huiwei.roomreservationlib.task.order.OrdeDetailTask;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 public class OrderDetailActivity extends Activity implements OnClickListener {
 	

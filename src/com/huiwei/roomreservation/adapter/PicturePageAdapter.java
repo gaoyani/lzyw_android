@@ -13,16 +13,32 @@ import android.widget.RelativeLayout;
 
 import com.huiwei.commonlib.SyncImageLoader;
 import com.huiwei.roomreservation.R;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 public class PicturePageAdapter extends PagerAdapter {  
 	List<View> views;
 	List<String> imgUrl;
-	private SyncImageLoader imageLoader;
+//	private SyncImageLoader imageLoader;
+	
+	private DisplayImageOptions options;
+	protected ImageLoader imageLoader = ImageLoader.getInstance();
 	  
 	public PicturePageAdapter(Context context, List<View> views, List<String> imgUrl) {
 		this.views = views;
 		this.imgUrl = imgUrl;
-		imageLoader = new SyncImageLoader(context);
+//		imageLoader = new SyncImageLoader(context);
+		
+		options = new DisplayImageOptions.Builder()
+		.showImageOnLoading(R.drawable.default_icon)
+		.showImageForEmptyUri(R.drawable.default_icon)
+		.showImageOnFail(R.drawable.default_icon)
+		.cacheInMemory(true)
+		.cacheOnDisc(true)
+		.considerExifParams(true)
+		.displayer(new RoundedBitmapDisplayer(0))
+		.build();
 	}
 	
     @Override  
@@ -48,48 +64,49 @@ public class PicturePageAdapter extends PagerAdapter {
         ImageView img = (ImageView) view.findViewById(R.id.iv_picture);  
         img.setTag(imgUrl.get(position));
         ProgressBar bar = (ProgressBar) view.findViewById(R.id.pb_picture); 
-        loadImage(img, bar, imgUrl.get(position));
+//        loadImage(img, bar, imgUrl.get(position));
+        imageLoader.displayImage(imgUrl.get(position), img, options, null);
         container.addView(view);  
         return views.get(position); 
     }  
     
-    private void loadImage(final ImageView iconView, final ProgressBar pb, final String iconUrl) {
-		if (iconUrl != null && !iconUrl.equals("")) {
-			imageLoader.loadImage(iconUrl,
-					new SyncImageLoader.OnImageLoadListener() {
-
-						@Override
-						public void onImageLoad(Bitmap bitmap) {
-							
-							pb.setVisibility(View.GONE);
-							
-							if (iconView.getTag() != null
-									&& iconView.getTag().equals(iconUrl)) {
-								if (bitmap == null) {
-									iconView.setImageBitmap(null);
-									iconView.setBackgroundResource(R.drawable.default_icon);
-								} else {
-									int height = iconView.getHeight();
-									int width = (bitmap.getWidth()*height)/bitmap.getHeight();
-									RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(width, height);
-									lp.addRule(RelativeLayout.CENTER_IN_PARENT);
-									iconView.setLayoutParams(lp);
-									iconView.setImageBitmap(bitmap);
-									iconView.setBackgroundDrawable(null);
-								}
-							}
-						}
-
-						@Override
-						public void onError() {
-							iconView.setImageBitmap(null);
-							iconView.setBackgroundResource(R.drawable.default_icon);
-						}
-					});
-			
-		} else {
-			iconView.setImageBitmap(null);
-			iconView.setBackgroundResource(R.drawable.default_icon);
-		}
-	}
+//    private void loadImage(final ImageView iconView, final ProgressBar pb, final String iconUrl) {
+//		if (iconUrl != null && !iconUrl.equals("")) {
+//			imageLoader.loadImage(iconUrl,
+//					new SyncImageLoader.OnImageLoadListener() {
+//
+//						@Override
+//						public void onImageLoad(Bitmap bitmap) {
+//							
+//							pb.setVisibility(View.GONE);
+//							
+//							if (iconView.getTag() != null
+//									&& iconView.getTag().equals(iconUrl)) {
+//								if (bitmap == null) {
+//									iconView.setImageBitmap(null);
+//									iconView.setBackgroundResource(R.drawable.default_icon);
+//								} else {
+//									int height = iconView.getHeight();
+//									int width = (bitmap.getWidth()*height)/bitmap.getHeight();
+//									RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(width, height);
+//									lp.addRule(RelativeLayout.CENTER_IN_PARENT);
+//									iconView.setLayoutParams(lp);
+//									iconView.setImageBitmap(bitmap);
+//									iconView.setBackgroundDrawable(null);
+//								}
+//							}
+//						}
+//
+//						@Override
+//						public void onError() {
+//							iconView.setImageBitmap(null);
+//							iconView.setBackgroundResource(R.drawable.default_icon);
+//						}
+//					});
+//			
+//		} else {
+//			iconView.setImageBitmap(null);
+//			iconView.setBackgroundResource(R.drawable.default_icon);
+//		}
+//	}
 }  

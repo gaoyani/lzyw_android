@@ -203,7 +203,7 @@ public class MainFragment extends Fragment implements OnClickListener, IXListVie
 		recommendRightView1.setInfo(Data.recommendInfo.rightTopItemInfo);
 		recommendRightView2.setInfo(Data.recommendInfo.rightBottomItemInfo);
 		enableStoreScene();
-		adapter.notifyDataSetChanged();
+		adapter.setData(Data.recommendInfo.recommendStoreList);
 	}
 	
 	private void initRecommendView() {
@@ -230,8 +230,7 @@ public class MainFragment extends Fragment implements OnClickListener, IXListVie
 		listViewContent.setForScrollView(true);
 		listViewContent.setPullLoadEnable(true);
 		listViewContent.setXListViewListener(this);
-		adapter = new StoreItemAdapter(
-				getActivity(), Data.recommendInfo.recommendStoreList, handler);
+		adapter = new StoreItemAdapter(getActivity(),  handler);
 		listViewContent.setAdapter(adapter);
 		listViewContent.setOnItemClickListener(new OnItemClickListener() {
 

@@ -98,14 +98,7 @@ public class ViewPagerListView extends RelativeLayout implements IXListViewListe
 		case TYPE_RECOMMENT:
 		case TYPE_AROUND:
 		case TYPE_FAVORITE: {
-			if (type == TYPE_RECOMMENT) {
-				adapter = new StoreItemAdapter(mContext, Data.storeList, handler);
-			} else if (type == TYPE_AROUND) {
-				adapter = new StoreItemAdapter(mContext, Data.aroundStoreList, handler);
-			} else if (type == TYPE_FAVORITE) {
-				adapter = new StoreItemAdapter(mContext, Data.favoriteStoreList, handler);
-			}
-			
+			adapter = new StoreItemAdapter(mContext, handler);
 			listView.setOnItemClickListener(itemClickListener);
 			listView.setDivider(getResources().getDrawable(R.color.store_item_split));
 			listView.setDividerHeight(1);
@@ -271,7 +264,15 @@ public class ViewPagerListView extends RelativeLayout implements IXListViewListe
 				return;
 			
 			if (msg.what == Constant.SUCCESS) {
-				adapter.notifyDataSetChanged();
+				if (curType == TYPE_RECOMMENT) {
+					((StoreItemAdapter) adapter).setData(Data.storeList);
+				} else if (curType == TYPE_AROUND) {
+					((StoreItemAdapter) adapter).setData(Data.aroundStoreList);
+				} else if (curType == TYPE_FAVORITE) {
+					((StoreItemAdapter) adapter).setData(Data.favoriteStoreList);
+				} else if (curType == TYPE_ORDER) {
+					((OrderItemAdapter) adapter).setData(Data.orderList);
+				}
 				listView.stopLoadMore();
 			} else if (msg.what == Constant.DATA_LOAD_COMPLETE) {
 				listView.loadComplete();

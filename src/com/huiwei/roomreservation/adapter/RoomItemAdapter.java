@@ -32,18 +32,34 @@ import com.huiwei.roomreservationlib.info.ServiceBaseInfo;
 import com.huiwei.roomreservationlib.info.ServiceInfo;
 import com.huiwei.roomreservationlib.info.StoreDetailInfo;
 import com.huiwei.roomreservationlib.data.Data;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 public class RoomItemAdapter extends BaseAdapter {
 
 	private LayoutInflater mInflater;
 	private Context mContext;
-	private SyncImageLoader syncImageLoader;
+//	private SyncImageLoader syncImageLoader;
 	private int type = StoreDetailInfo.TYPE_ROOM;
+	
+	private DisplayImageOptions options;
+	protected ImageLoader imageLoader = ImageLoader.getInstance();
 
 	public RoomItemAdapter(Context context) {
 		mInflater = LayoutInflater.from(context);
 		mContext = context;
-		syncImageLoader = new SyncImageLoader(mContext);
+//		syncImageLoader = new SyncImageLoader(mContext);
+		
+		options = new DisplayImageOptions.Builder()
+		.showImageOnLoading(R.drawable.default_icon)
+		.showImageForEmptyUri(R.drawable.default_icon)
+		.showImageOnFail(R.drawable.default_icon)
+		.cacheInMemory(true)
+		.cacheOnDisc(true)
+		.considerExifParams(true)
+		.displayer(new RoundedBitmapDisplayer(5))
+		.build();
 	}
 	
 	public void setListType(int type) {
@@ -123,8 +139,9 @@ public class RoomItemAdapter extends BaseAdapter {
 		viewHolder.reservation.setTag(position);
 		viewHolder.reservation.setOnClickListener(clickListener);
 		
-		viewHolder.icon.setTag(info.iconUrl);
-		loadImage(viewHolder.icon, info.iconUrl);
+//		viewHolder.icon.setTag(info.iconUrl);
+//		loadImage(viewHolder.icon, info.iconUrl);
+		imageLoader.displayImage(info.iconUrl, viewHolder.icon, options, null);
 		
 		return convertView;
 	}
@@ -175,39 +192,39 @@ public class RoomItemAdapter extends BaseAdapter {
 		}
 	};
 
-	private void loadImage(final ImageView iconView, final String iconUrl) {
-		if (iconUrl != null && !iconUrl.equals("")) {			
-			syncImageLoader.loadImage(iconUrl,
-					new SyncImageLoader.OnImageLoadListener() {
-
-						@Override
-						public void onImageLoad(Bitmap bitmap) {
-							if (iconView.getTag() != null
-									&& iconView.getTag().equals(iconUrl)) {
-								if (bitmap == null) {
-									iconView.setImageBitmap(null);
-									iconView
-											.setBackgroundResource(R.drawable.default_icon);
-								} else {
-									iconView.setImageBitmap(bitmap);
-									iconView.setBackgroundDrawable(null);
-								}
-							}
-						}
-
-						@Override
-						public void onError() {
-							iconView.setImageBitmap(null);
-							iconView
-									.setBackgroundResource(R.drawable.default_icon);
-						}
-					});
-
-		} else {
-			iconView.setImageBitmap(null);
-			iconView.setBackgroundResource(R.drawable.default_icon);
-		}
-	}
+//	private void loadImage(final ImageView iconView, final String iconUrl) {
+//		if (iconUrl != null && !iconUrl.equals("")) {			
+//			syncImageLoader.loadImage(iconUrl,
+//					new SyncImageLoader.OnImageLoadListener() {
+//
+//						@Override
+//						public void onImageLoad(Bitmap bitmap) {
+//							if (iconView.getTag() != null
+//									&& iconView.getTag().equals(iconUrl)) {
+//								if (bitmap == null) {
+//									iconView.setImageBitmap(null);
+//									iconView
+//											.setBackgroundResource(R.drawable.default_icon);
+//								} else {
+//									iconView.setImageBitmap(bitmap);
+//									iconView.setBackgroundDrawable(null);
+//								}
+//							}
+//						}
+//
+//						@Override
+//						public void onError() {
+//							iconView.setImageBitmap(null);
+//							iconView
+//									.setBackgroundResource(R.drawable.default_icon);
+//						}
+//					});
+//
+//		} else {
+//			iconView.setImageBitmap(null);
+//			iconView.setBackgroundResource(R.drawable.default_icon);
+//		}
+//	}
 	
 	public static class ViewHolder {
 		ImageView icon;

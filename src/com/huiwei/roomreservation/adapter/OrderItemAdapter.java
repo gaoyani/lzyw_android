@@ -1,58 +1,56 @@
 package com.huiwei.roomreservation.adapter;
 
-import java.nio.channels.AsynchronousCloseException;
+import java.util.ArrayList;
 import java.util.List;
 
-import com.huiwei.commonlib.SyncImageLoader;
-import com.huiwei.roomreservation.R;
-import com.huiwei.roomreservation.activity.CommentActivity;
-import com.huiwei.roomreservation.activity.PaymentChoseActivity;
-import com.huiwei.roomreservation.activity.RoomReservationActivity;
-import com.huiwei.roomreservation.activity.StartActivity;
-import com.huiwei.roomreservationlib.info.CommentInfo;
-import com.huiwei.roomreservationlib.info.OrderDetialInfo;
-import com.huiwei.roomreservationlib.info.OrderInfo;
-import com.huiwei.roomreservationlib.info.StoreDetailInfo;
-import com.huiwei.roomreservationlib.info.StoreInfo;
-import com.huiwei.roomreservationlib.task.order.OperationOrderTask;
-import com.huiwei.roomreservationlib.data.Constant;
-import com.huiwei.roomreservationlib.data.Data;
-import com.huiwei.roomreservationlib.data.OrderManager;
-
-import android.R.integer;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.RatingBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.huiwei.roomreservation.R;
+import com.huiwei.roomreservation.activity.CommentActivity;
+import com.huiwei.roomreservation.activity.PaymentChoseActivity;
+import com.huiwei.roomreservation.activity.RoomReservationActivity;
+import com.huiwei.roomreservationlib.data.Constant;
+import com.huiwei.roomreservationlib.data.Data;
+import com.huiwei.roomreservationlib.data.OrderManager;
+import com.huiwei.roomreservationlib.info.CommentInfo;
+import com.huiwei.roomreservationlib.info.OrderInfo;
+import com.huiwei.roomreservationlib.info.StoreInfo;
+import com.huiwei.roomreservationlib.task.order.OperationOrderTask;
 
 public class OrderItemAdapter extends BaseAdapter {
 
 	private LayoutInflater mInflater;
 	private Context mContext;
+	private List<OrderInfo> orderInfoList = new ArrayList<OrderInfo>();
 
 	public OrderItemAdapter(Context context) {
 		mInflater = LayoutInflater.from(context);
 		mContext = context;
 	}
 	
+	public void setData(List<OrderInfo> orderInfoList) {
+		if (orderInfoList != null) {
+			this.orderInfoList.clear();
+			this.orderInfoList.addAll(orderInfoList);
+			notifyDataSetChanged();
+		}
+	}
+	
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return Data.orderList.size();
+		return orderInfoList.size();
 	}
 
 	@Override
@@ -90,7 +88,7 @@ public class OrderItemAdapter extends BaseAdapter {
 			viewHolder = (ViewHolder)convertView.getTag();
 		}
 		
-		OrderInfo info = Data.orderList.get(position);
+		OrderInfo info = orderInfoList.get(position);
 		viewHolder.orderID.setText(info.orderID);
 		viewHolder.orderTime.setText(info.time);
 		viewHolder.orderInfo.setText(info.info);
@@ -183,7 +181,7 @@ public class OrderItemAdapter extends BaseAdapter {
 		@Override
 		public void onClick(View v) {
 			int position = (Integer)(v.getTag(R.id.tag_index));
-			OrderInfo info = Data.orderList.get(position);
+			OrderInfo info = orderInfoList.get(position);
 			OperationOrderTask task = new OperationOrderTask(mContext, operationHandler, 
 					info, (Integer)(v.getTag(R.id.tag_operation)));
 			task.execute();
@@ -210,7 +208,7 @@ public class OrderItemAdapter extends BaseAdapter {
 		@Override
 		public void onClick(View v) {
 			int position = (Integer)(v.getTag(R.id.tag_index));
-			Data.orderDetialInfo.copy(Data.orderList.get(position));
+			Data.orderDetialInfo.copy(orderInfoList.get(position));
 			Intent intent = new Intent();
 			intent.putExtra("comment_type", CommentInfo.COMMENT_ORDER);
 			intent.setClass(mContext, CommentActivity.class);
@@ -223,7 +221,7 @@ public class OrderItemAdapter extends BaseAdapter {
 		@Override
 		public void onClick(View v) {
 			int position = (Integer)(v.getTag(R.id.tag_index));
-			Data.orderDetialInfo.copy(Data.orderList.get(position));
+			Data.orderDetialInfo.copy(orderInfoList.get(position));
 			Intent intent = new Intent();
 			intent.putExtra("reservation_via", RoomReservationActivity.RESERVATION_ORDER);
 			intent.setClass(mContext, RoomReservationActivity.class);
@@ -236,7 +234,7 @@ public class OrderItemAdapter extends BaseAdapter {
 		@Override
 		public void onClick(View v) {
 			int position = (Integer)(v.getTag(R.id.tag_index));
-			Data.orderDetialInfo.copy(Data.orderList.get(position));
+			Data.orderDetialInfo.copy(orderInfoList.get(position));
 			Intent intent = new Intent();
 			intent.putExtra("order_id", Data.orderDetialInfo.id);
 			intent.putExtra("order_sn", Data.orderDetialInfo.orderID);

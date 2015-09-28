@@ -3,36 +3,25 @@ package com.huiwei.roomreservation.view;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Handler;
 import android.util.AttributeSet;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
-import com.huiwei.commonlib.SyncImageLoader;
 import com.huiwei.roomreservation.R;
 import com.huiwei.roomreservation.activity.CommentActivity;
 import com.huiwei.roomreservation.activity.ComplaintActivity;
 import com.huiwei.roomreservation.activity.LoginActivity;
 import com.huiwei.roomreservation.activity.MainActivity;
 import com.huiwei.roomreservation.activity.NavigationActivity;
-import com.huiwei.roomreservation.activity.ReservationDoneActivity;
-import com.huiwei.roomreservation.activity.RoomReservationActivity;
-import com.huiwei.roomreservation.activity.RoomDetailActivity;
-import com.huiwei.roomreservation.activity.StoreDetailActivity;
 import com.huiwei.roomreservation.common.RequestShareTextTask;
-import com.huiwei.roomreservationlib.info.CommentInfo;
-import com.huiwei.roomreservationlib.info.RoomInfo;
-import com.huiwei.roomreservationlib.info.StoreInfo;
 import com.huiwei.roomreservationlib.data.Constant;
 import com.huiwei.roomreservationlib.data.Data;
 import com.huiwei.roomreservationlib.data.UrlConstant;
+import com.huiwei.roomreservationlib.info.CommentInfo;
 
 public class BottomTabView extends LinearLayout implements OnClickListener {
 	
